@@ -2,17 +2,13 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package trafficsim;
-
-import java.util.ArrayList;
+package infrastructure;
 
 /**
  *
  * @author schueler
  */
-public class Crossroad
+public class TrafficLight
 {
-    ArrayList<Line> stops;
-    
     
 }

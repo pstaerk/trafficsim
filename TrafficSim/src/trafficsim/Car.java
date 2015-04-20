@@ -4,6 +4,9 @@
  */
 package trafficsim;
 
+import infrastructure.Line;
+import ai.Driver;
+
 /**
  *
  * @author schueler
