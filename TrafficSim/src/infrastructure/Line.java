@@ -4,7 +4,7 @@
  */
 package infrastructure;
 
-import vehicles.Car;
+import stuffThatDrives.Car;
 import java.awt.Point;
 import java.util.ArrayList;
 /**

@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package Vehicles;
+package stuffThatDrives;
 
 import infrastructure.Line;
 import ai.Driver;
@@ -33,6 +33,28 @@ public class Car
         this.x = x;
         this.curVelocity = curVelocity;
         this.curAcceleration = curAcceleration;
+    }
+    
+    public class CarData
+    {
+        public int maxMaxSpeed;
+        public int minMaxSpeed;
+        
+        public int maxMaxAcc;
+        public int minMaxAcc;
+        
+        public int maxMaxDcc;
+        public int minMaxDcc;
+
+        public CarData(int maxMaxSpeed, int minMaxSpeed, int maxMaxAcc, int minMaxAcc, int maxMaxDcc, int minMaxDcc)
+        {
+            this.maxMaxSpeed = maxMaxSpeed;
+            this.minMaxSpeed = minMaxSpeed;
+            this.maxMaxAcc = maxMaxAcc;
+            this.minMaxAcc = minMaxAcc;
+            this.maxMaxDcc = maxMaxDcc;
+            this.minMaxDcc = minMaxDcc;
+        } 
     }
     
     
