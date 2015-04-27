@@ -22,9 +22,11 @@ class MapEditor implements GameState
     private final int ID;
     private StateBasedGame sbGame;
     private Map map;
-    private int tempWidth = 100;
-    private int tempHeight = 100;
+    private int tempWidth = 120;
+    private int tempHeight = 80;
     private int zoom = 10;
+    private int xoffset = 0;
+    private int yoffset = 0;
     
     public MapEditor(int MAINMENU)
     {
@@ -50,11 +52,11 @@ class MapEditor implements GameState
         
         for(int i=0; i<tempWidth; i++)
         {
-            g.drawLine(i*zoom , 0, i*zoom, tempHeight*zoom);
+            g.drawLine((i+xoffset)*zoom , yoffset*zoom, (i+xoffset)*zoom, (tempHeight+yoffset)*zoom);
         }
         for(int i=0; i<tempHeight; i++)
         {
-            g.drawLine(0 , i*zoom, tempHeight*zoom, i*zoom);
+            g.drawLine(xoffset*zoom , (i+yoffset)*zoom, (tempWidth+xoffset)*zoom, (i+yoffset)*zoom);
         }
     }
 
