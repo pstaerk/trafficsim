@@ -51,7 +51,6 @@ public class RandomVehicleGenerator
     public Driver generateDriver (Driver.DriverData data)
     {
         
-        
-        return null;
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 }
