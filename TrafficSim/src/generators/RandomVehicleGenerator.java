@@ -13,7 +13,7 @@ import vehicles.Car;
  *
  * @author schueler
  */
-public class randomGenerator
+public class RandomVehicleGenerator
 {    
     /**Generate any number of Cars with random parameters. Ugly code
      * 
@@ -23,21 +23,21 @@ public class randomGenerator
     {
         //Generating speed variable
         Random rn = new Random();
-        int n = data.averageMaxSpeed - data.maxSpeedRange + 1;
+        int n = data.maxMaxSpeed - data.minMaxSpeed + 1;
         int i = rn.nextInt() % n;
-        int randMaxSpeed =  data.maxSpeedRange + i;
+        int randMaxSpeed =  data.minMaxSpeed + i;
         
         //Generating acc variable
         Random rn2 = new Random();
-        int n2 = data.averageMaxAcc - data.maxAccRange + 1;
+        int n2 = data.maxMaxAcc - data.minMaxAcc + 1;
         int i2 = rn2.nextInt() % n;
-        int randMaxAcc =  data.maxAccRange + i;
+        int randMaxAcc =  data.minMaxAcc + i;
         
         //Generating acc variable
         Random rn3 = new Random();
-        int n3 = data.averageMaxDcc - data.maxDccRange + 1;
+        int n3 = data.maxMaxDcc - data.minMaxDcc + 1;
         int i3 = rn3.nextInt() % n;
-        int randMaxDcc =  data.maxDccRange + i;
+        int randMaxDcc =  data.minMaxDcc + i;
         
         Driver driver = generateDriver(driverData);
         

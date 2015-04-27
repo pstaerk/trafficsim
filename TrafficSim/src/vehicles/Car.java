@@ -36,14 +36,14 @@ public class Car
 
     public class CarData
     {
-        public int averageMaxSpeed;
-        public int maxSpeedRange;
+        public int maxMaxSpeed;
+        public int minMaxSpeed;
         
-        public int averageMaxAcc;
-        public int maxAccRange;
+        public int maxMaxAcc;
+        public int minMaxAcc;
         
-        public int averageMaxDcc;
-        public int maxDccRange;
+        public int maxMaxDcc;
+        public int minMaxDcc;
         
         
         /**Define the Max and Min specifications of cars. Used by Spawner class.
@@ -51,12 +51,12 @@ public class Car
          */
         public CarData(int averageMaxSpeed , int maxSpeedRange , int averageMaxAcc , int maxAccRange , int averageMaxDcc , int maxDccRange)
         {
-            this.averageMaxSpeed = averageMaxSpeed;
-            this.maxSpeedRange = maxSpeedRange;
-            this.averageMaxAcc = averageMaxAcc;
-            this.maxAccRange = maxAccRange;
-            this.averageMaxDcc = averageMaxDcc;
-            this.maxDccRange = maxDccRange;
+            this.maxMaxSpeed = averageMaxSpeed;
+            this.minMaxSpeed = maxSpeedRange;
+            this.maxMaxAcc = averageMaxAcc;
+            this.minMaxAcc = maxAccRange;
+            this.maxMaxDcc = averageMaxDcc;
+            this.minMaxDcc = maxDccRange;
         }
     }
 }
