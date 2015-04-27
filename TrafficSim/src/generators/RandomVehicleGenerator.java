@@ -13,7 +13,7 @@ import vehicles.Car;
  *
  * @author schueler
  */
-public class randomGenerator
+public class RandomVehicleGenerator
 {    
     /**Generate any number of Cars with random parameters. Ugly code
      * 
