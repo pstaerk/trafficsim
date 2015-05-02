@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package editor;
+package gui;
 
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;

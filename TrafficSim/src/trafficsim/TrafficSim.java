@@ -1,7 +1,8 @@
 package trafficsim;
 
-import editor.MainMenu;
-import editor.MapEditor;
+import gui.SimulatorUI;
+import gui.MainMenu;
+import gui.MapEditor;
 import org.newdawn.slick.AppGameContainer;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.SlickException;
@@ -25,6 +26,7 @@ public class TrafficSim extends StateBasedGame {
 
     public static final int MAINMENU = 0;
     public static final int MAPEDITOR = 1;
+    public static final int SIMULATOR = 2;
 
     public TrafficSim() {
         super("Mapeditor");
@@ -34,6 +36,7 @@ public class TrafficSim extends StateBasedGame {
     public void initStatesList(GameContainer container) throws SlickException {
         addState(new MainMenu(MAINMENU));
         addState(new MapEditor(MAPEDITOR));
+        addState(new SimulatorUI(SIMULATOR));
     }
 
     public static void main(String[] args) {

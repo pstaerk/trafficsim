@@ -1,8 +1,9 @@
 /*
- * To change this template, choose Tools | Templates
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package editor;
+package gui;
 
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
@@ -10,24 +11,17 @@ import org.newdawn.slick.Input;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.state.GameState;
 import org.newdawn.slick.state.StateBasedGame;
-import trafficsim.Map;
 
 /**
  *
- * @author schueler
+ * @author helicopterfly
  */
-public class MapEditor implements GameState {
+public class SimulatorUI implements GameState {
 
     private final int ID;
     private StateBasedGame sbGame;
-    private Map map;
-    private int tempWidth = 120;
-    private int tempHeight = 80;
-    private int zoom = 10;
-    private int xoffset = 0;
-    private int yoffset = 0;
 
-    public MapEditor(int MAINMENU) {
+    public SimulatorUI(int MAINMENU) {
         this.ID = MAINMENU;
     }
 
@@ -38,19 +32,10 @@ public class MapEditor implements GameState {
 
     @Override
     public void init(GameContainer container, StateBasedGame game) throws SlickException {
-        map = new Map();
     }
 
     @Override
     public void render(GameContainer container, StateBasedGame game, Graphics g) throws SlickException {
-        g.setClip(0, 0, 1200, 800);
-
-        for (int i = 0; i <= tempWidth; i++) {
-            g.drawLine(i * zoom + xoffset, yoffset, i * zoom + xoffset, tempHeight * zoom + yoffset);
-        }
-        for (int i = 0; i <= tempHeight; i++) {
-            g.drawLine(xoffset, i * zoom + yoffset, tempWidth * zoom + xoffset, i * zoom + yoffset);
-        }
     }
 
     @Override
@@ -88,8 +73,6 @@ public class MapEditor implements GameState {
 
     @Override
     public void mouseDragged(int oldx, int oldy, int newx, int newy) {
-        xoffset -= (oldx - newx);
-        yoffset -= (oldy - newy);
     }
 
     @Override
@@ -156,5 +139,4 @@ public class MapEditor implements GameState {
     @Override
     public void controllerButtonReleased(int controller, int button) {
     }
-
 }
