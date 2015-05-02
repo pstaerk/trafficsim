@@ -32,6 +32,7 @@ public class SimulatorUI implements GameState {
 
     @Override
     public void init(GameContainer container, StateBasedGame game) throws SlickException {
+        sbGame = game;
     }
 
     @Override

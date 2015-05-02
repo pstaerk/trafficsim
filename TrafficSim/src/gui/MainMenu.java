@@ -4,21 +4,28 @@
  */
 package gui;
 
+import gui.Button.ButtonTemplate;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import org.newdawn.slick.Color;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Input;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.state.GameState;
 import org.newdawn.slick.state.StateBasedGame;
+import trafficsim.TrafficSim;
 
 /**
  *
  * @author schueler
  */
-public class MainMenu implements GameState {
+public class MainMenu implements GameState, ActionListener {
 
     private final int ID;
     private StateBasedGame sbGame;
+    private Button mapEditorButton;
+    private Button simulatorUIButton;
 
     public MainMenu(int MAINMENU) {
         this.ID = MAINMENU;
@@ -30,11 +37,28 @@ public class MainMenu implements GameState {
     }
 
     @Override
+    public void actionPerformed(ActionEvent ae) {
+        if(ae.getSource() == mapEditorButton)
+        {
+            sbGame.enterState(TrafficSim.MAPEDITOR);
+        } else if(ae.getSource() == simulatorUIButton)
+        {
+            sbGame.enterState(TrafficSim.SIMULATOR);
+        }
+    }
+
+    @Override
     public void init(GameContainer container, StateBasedGame game) throws SlickException {
+        sbGame = game;
+        ButtonTemplate template = new Button.ButtonTemplate(Color.white, Color.gray, Color.black, 10, 160, 40);
+        mapEditorButton = new Button(420, 40, "Map Editor", template, this);
+        simulatorUIButton = new Button(420, 160, "Simulator", template, this);
     }
 
     @Override
     public void render(GameContainer container, StateBasedGame game, Graphics g) throws SlickException {
+        mapEditorButton.draw(g);
+        simulatorUIButton.draw(g);
     }
 
     @Override
@@ -56,6 +80,8 @@ public class MainMenu implements GameState {
 
     @Override
     public void mouseClicked(int button, int x, int y, int clickCount) {
+        mapEditorButton.mouseClicked(x, y);
+        simulatorUIButton.mouseClicked(x, y);
     }
 
     @Override
@@ -68,6 +94,8 @@ public class MainMenu implements GameState {
 
     @Override
     public void mouseMoved(int oldx, int oldy, int newx, int newy) {
+        mapEditorButton.mouseHasMoved(newx, newy);
+        simulatorUIButton.mouseHasMoved(newx, newy);
     }
 
     @Override
@@ -138,5 +166,4 @@ public class MainMenu implements GameState {
     @Override
     public void controllerButtonReleased(int controller, int button) {
     }
-
 }

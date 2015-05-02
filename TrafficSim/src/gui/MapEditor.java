@@ -4,6 +4,7 @@
  */
 package gui;
 
+import org.newdawn.slick.Color;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Input;
@@ -38,13 +39,14 @@ public class MapEditor implements GameState {
 
     @Override
     public void init(GameContainer container, StateBasedGame game) throws SlickException {
+        sbGame = game;
         map = new Map();
     }
 
     @Override
     public void render(GameContainer container, StateBasedGame game, Graphics g) throws SlickException {
         g.setClip(0, 0, 1200, 800);
-
+        g.setColor(Color.white);
         for (int i = 0; i <= tempWidth; i++) {
             g.drawLine(i * zoom + xoffset, yoffset, i * zoom + xoffset, tempHeight * zoom + yoffset);
         }
