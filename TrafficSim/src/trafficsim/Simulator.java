@@ -5,7 +5,7 @@
 package trafficsim;
 
 import java.util.ArrayList;
-import vehicles.Car;
+import cars.Car;
 
 /**
  *
