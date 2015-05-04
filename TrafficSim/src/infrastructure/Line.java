@@ -24,6 +24,8 @@ public class Line
     private int speedLimitTruck;
     
     private ArrayList<Car> cars;
+    
+    private int length;
 
     public Line()
     {

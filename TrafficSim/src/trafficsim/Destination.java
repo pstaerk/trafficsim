@@ -4,15 +4,13 @@
  */
 package trafficsim;
 
-import java.util.ArrayList;
-import vehicles.Car;
+import infrastructure.Line;
 
 /**
  *
  * @author schueler
  */
-public class Simulator
+public class Destination
 {
-    private Map map;
-    private ArrayList<Car> cars;
+    private Line line;
 }
