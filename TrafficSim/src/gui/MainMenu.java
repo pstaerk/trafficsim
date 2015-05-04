@@ -4,7 +4,8 @@
  */
 package gui;
 
-import gui.Button.ButtonTemplate;
+import gui.elements.Button;
+import gui.elements.Button.ButtonTemplate;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import org.newdawn.slick.Color;
