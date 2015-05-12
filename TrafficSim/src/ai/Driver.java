@@ -17,8 +17,8 @@ public class Driver
         this.reactionTime = reactionTime;
     }
     
-    private int assholeIndex;
-    private float reactionTime;
+    private int assholeIndex;//Used for simulation of drivers behaviour
+    private float reactionTime;//As described above
     
     public class DriverData
     {
