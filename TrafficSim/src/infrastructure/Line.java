@@ -2,10 +2,11 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package trafficsim;
+package infrastructure;
 
 import java.awt.Point;
 import java.util.ArrayList;
+import trafficsim.Car;
 
 /**
  *
