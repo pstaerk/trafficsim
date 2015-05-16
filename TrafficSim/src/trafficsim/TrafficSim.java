@@ -10,10 +10,12 @@ package trafficsim;
  */
 public class TrafficSim
 {
+    private static Simulator simulator;
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args)
     {
+        simulator = new Simulator();
     }
 }
