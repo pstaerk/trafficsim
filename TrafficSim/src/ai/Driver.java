@@ -10,5 +10,10 @@ package ai;
  */
 public class Driver
 {
+    private int assholeIndex;
+    private float reactionTime;
+    
+    
+    
     
 }
