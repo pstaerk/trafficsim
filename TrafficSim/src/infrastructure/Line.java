@@ -6,7 +6,7 @@ package infrastructure;
 
 import java.awt.Point;
 import java.util.ArrayList;
-import Vehicles.Car;
+import vehicles.Car;
 
 /**
  *
