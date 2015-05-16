@@ -4,10 +4,9 @@
  */
 package infrastructure;
 
+import vehicles.Car;
 import java.awt.Point;
 import java.util.ArrayList;
-import vehicles.Car;
-
 /**
  *
  * @author schueler
