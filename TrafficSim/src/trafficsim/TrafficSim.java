@@ -1,16 +1,17 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package trafficsim;
 
 /**
- *
- * @author schueler
+ * Main class for execution of the simulation
+ * <p/>
+ * @author helicopterfly
  */
 public class TrafficSim
 {
+    /**
+     * Simulator
+     */
     private static Simulator simulator;
+
     /**
      * @param args the command line arguments
      */
