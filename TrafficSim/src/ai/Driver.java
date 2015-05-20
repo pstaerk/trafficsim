@@ -15,5 +15,9 @@ public class Driver
     
     
     
-    
+  
+    public class DriverData
+    {
+        
+    }
 }
