@@ -16,7 +16,6 @@ public class Car
     public final int MAX_SPEED;
     public final int MAX_ACCL;
     public final int MAX_DCCL;
-    
     private Line line;
     private Driver driver;
     private float x;
@@ -34,6 +33,30 @@ public class Car
         this.curVelocity = curVelocity;
         this.curAcceleration = curAcceleration;
     }
-    
-    
+
+    public class CarData
+    {
+        public int averageMaxSpeed;
+        public int maxSpeedRange;
+        
+        public int averageMaxAcc;
+        public int maxAccRange;
+        
+        public int averageMaxDcc;
+        public int maxDccRange;
+        
+        
+        /**Define the Max and Min specifications of cars. Used by Spawner class.
+         * 
+         */
+        public CarData(int averageMaxSpeed , int maxSpeedRange , int averageMaxAcc , int maxAccRange , int averageMaxDcc , int maxDccRange)
+        {
+            this.averageMaxSpeed = averageMaxSpeed;
+            this.maxSpeedRange = maxSpeedRange;
+            this.averageMaxAcc = averageMaxAcc;
+            this.maxAccRange = maxAccRange;
+            this.averageMaxDcc = averageMaxDcc;
+            this.maxDccRange = maxDccRange;
+        }
+    }
 }
