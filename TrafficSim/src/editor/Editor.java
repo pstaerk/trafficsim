@@ -31,7 +31,7 @@ public class Editor extends StateBasedGame
     @Override
     public void initStatesList(GameContainer container) throws SlickException
     {
-        addState(new MainMenu(MAINMENU));
+        //addState(new MainMenu(MAINMENU));
         addState(new MapEditor(MAPEDITOR));
     }
     
