@@ -10,6 +10,7 @@ import org.newdawn.slick.Input;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.state.GameState;
 import org.newdawn.slick.state.StateBasedGame;
+import trafficsim.Map;
 
 /**
  *
@@ -20,6 +21,10 @@ class MapEditor implements GameState
 
     private final int ID;
     private StateBasedGame sbGame;
+    private Map map;
+    private int tempWidth = 100;
+    private int tempHeight = 100;
+    private int zoom = 10;
     
     public MapEditor(int MAINMENU)
     {
@@ -35,11 +40,22 @@ class MapEditor implements GameState
     @Override
     public void init(GameContainer container , StateBasedGame game) throws SlickException
     {
+        map = new Map();
     }
 
     @Override
     public void render(GameContainer container , StateBasedGame game , Graphics g) throws SlickException
     {
+        g.setClip(0, 0, 1200, 800);
+        
+        for(int i=0; i<tempWidth; i++)
+        {
+            g.drawLine(i*zoom , 0, i*zoom, tempHeight*zoom);
+        }
+        for(int i=0; i<tempHeight; i++)
+        {
+            g.drawLine(0 , i*zoom, tempHeight*zoom, i*zoom);
+        }
     }
 
     @Override
