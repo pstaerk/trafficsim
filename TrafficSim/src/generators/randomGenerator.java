@@ -19,7 +19,7 @@ public class randomGenerator
      * 
      * @return arrayList<Car>
      */
-    public Car generateCar (Car.CarData data, Line line)
+    public Car generateCar (Car.CarData data, Line line, Driver.DriverData driverData)
     {
         //Generating speed variable
         Random rn = new Random();
@@ -39,12 +39,16 @@ public class randomGenerator
         int i3 = rn3.nextInt() % n;
         int randMaxDcc =  data.maxDccRange + i;
         
-        Driver driver = generateDriver();
+        Driver driver = generateDriver(driverData);
         
         return new Car(randMaxSpeed, randMaxAcc, randMaxDcc, line, driver, 0, 0, 0);
     }
     
-    public Driver generateDriver ()
+    /**Generate random driver.
+     * 
+     * @return driver
+     */
+    public Driver generateDriver (Driver.DriverData data)
     {
         
         
