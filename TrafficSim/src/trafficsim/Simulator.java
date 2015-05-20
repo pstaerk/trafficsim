@@ -4,6 +4,9 @@
  */
 package trafficsim;
 
+import java.util.ArrayList;
+import vehicles.Car;
+
 /**
  *
  * @author schueler
@@ -11,4 +14,5 @@ package trafficsim;
 public class Simulator
 {
     private Map map;
+    private ArrayList<Car> cars;
 }

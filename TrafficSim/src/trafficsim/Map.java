@@ -5,6 +5,7 @@
 package trafficsim;
 
 import infrastructure.Crossroad;
+import infrastructure.Line;
 import java.util.ArrayList;
 
 /**
@@ -16,4 +17,5 @@ public class Map
     private ArrayList<Spawner> spawner;
     private ArrayList<Destination> destinations;
     private ArrayList<Crossroad> crossroads;
+    private ArrayList<Line> lines;
 }
