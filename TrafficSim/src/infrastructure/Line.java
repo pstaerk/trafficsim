@@ -26,7 +26,7 @@ public class Line
     
     private ArrayList<Car> cars;
     
-    private int lineLength;
+    private int length;
 
     public Line()
     {
