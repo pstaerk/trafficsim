@@ -39,7 +39,7 @@ public class randomGenerator
         int i3 = rn3.nextInt() % n;
         int randMaxDcc =  data.maxDccRange + i;
         
-        
+        Driver driver = generateDriver();
         
         return new Car(randMaxSpeed, randMaxAcc, randMaxDcc, line, driver, 0, 0, 0);
     }
