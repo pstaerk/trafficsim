@@ -28,6 +28,7 @@ public class MapEditor implements GameState {
     private int zoom = 10;
     private int xoffset = 0;
     private int yoffset = 0;
+    private EditorMenu menu;
 
     public MapEditor(int MAINMENU) {
         this.ID = MAINMENU;
@@ -42,6 +43,7 @@ public class MapEditor implements GameState {
     public void init(GameContainer container, StateBasedGame game) throws SlickException {
         sbGame = game;
         map = new Map();
+        menu = new EditorMenu();
     }
 
     @Override
@@ -54,6 +56,8 @@ public class MapEditor implements GameState {
         for (int i = 0; i <= tempHeight; i++) {
             g.drawLine(xoffset, i * zoom + yoffset, tempWidth * zoom + xoffset, i * zoom + yoffset);
         }
+        
+        menu.draw(g);
     }
 
     @Override
