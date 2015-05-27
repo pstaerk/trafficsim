@@ -5,9 +5,9 @@
 package generators;
 
 import ai.Driver;
+import cars.Car;
 import infrastructure.Line;
 import java.util.Random;
-import cars.Car;
 
 /**
  *
@@ -50,6 +50,7 @@ public class RandomVehicleGenerator
      */
     public Driver generateDriver (Driver.DriverData data)
     {
+        
         
         throw new UnsupportedOperationException("Not supported yet.");
     }

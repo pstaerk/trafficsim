@@ -4,19 +4,22 @@
  */
 package ai;
 
-/**
+/**Class representing driver of car. This class contains ai methods and data.
  *
  * @author schueler
  */
 public class Driver
 {
+
+    public Driver(int assholeIndex , float reactionTime)
+    {
+        this.assholeIndex = assholeIndex;
+        this.reactionTime = reactionTime;
+    }
+    
     private int assholeIndex;
     private float reactionTime;
     
-    
-    
-    
-
     public class DriverData
     {
         public int maxAssholeInex;
