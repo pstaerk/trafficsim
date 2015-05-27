@@ -19,6 +19,7 @@ import trafficsim.Map;
  */
 public class MapEditor implements GameState {
 
+    private final static float ZOOM_SPEED = 0.05f;
     private final int ID;
     private StateBasedGame sbGame;
     private Map map;
@@ -46,7 +47,7 @@ public class MapEditor implements GameState {
     @Override
     public void render(GameContainer container, StateBasedGame game, Graphics g) throws SlickException {
         g.setClip(0, 0, 1200, 800);
-        g.setColor(Color.white);
+        g.setColor(Color.gray);
         for (int i = 0; i <= tempWidth; i++) {
             g.drawLine(i * zoom + xoffset, yoffset, i * zoom + xoffset, tempHeight * zoom + yoffset);
         }
@@ -70,6 +71,11 @@ public class MapEditor implements GameState {
 
     @Override
     public void mouseWheelMoved(int change) {
+        int newzoom = (int) (zoom + change * ZOOM_SPEED);
+        if(newzoom > 0)
+        {
+            zoom = newzoom;
+        }
     }
 
     @Override
