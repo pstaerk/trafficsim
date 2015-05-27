@@ -50,8 +50,14 @@ public class RandomVehicleGenerator
      */
     public Driver generateDriver (Driver.DriverData data)
     {
+        //Random AssholeIndex generator.
+        Random rn = new Random();
+        int n = data.maxAssholeInex - data.minAssholeIndex + 1;
+        int i = rn.nextInt() % n;
+        int randAssholeIndex =  data.minAssholeIndex + i;
         
+        float randReactionTime = (float) Math.random();
         
-        throw new UnsupportedOperationException("Not supported yet.");
+        return new Driver(randAssholeIndex, randReactionTime);
     }
 }
