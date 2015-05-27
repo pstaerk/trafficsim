@@ -7,7 +7,7 @@ package generators;
 import ai.Driver;
 import infrastructure.Line;
 import java.util.Random;
-import stuffThatDrives.Car;
+import cars.Car;
 
 /**
  *
