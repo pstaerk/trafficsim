@@ -9,7 +9,7 @@ import cars.Car;
 import infrastructure.Line;
 import java.util.Random;
 
-/**
+/**This class is used to randomly generate Vehicles. Currently supporting generating cars.
  *
  * @author schueler
  */
