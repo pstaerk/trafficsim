@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package gui;
+package gui.elements;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -14,7 +14,7 @@ import org.newdawn.slick.Graphics;
  *
  * @author helicopterfly
  */
-public class Button {
+public class Button implements Drawable{
 
     private final Color colorNormal;
     private final Color colorHover;
@@ -65,6 +65,7 @@ public class Button {
         return height;
     }
 
+    @Override
     public void draw(Graphics g) {
         if (isHover) {
                 g.setColor(colorHover);
