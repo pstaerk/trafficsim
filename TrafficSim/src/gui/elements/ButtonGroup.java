@@ -4,26 +4,35 @@
  */
 package gui.elements;
 
+import gui.elements.Button.ButtonColorTemplate;
 import gui.elements.Button.ButtonTemplate;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import org.newdawn.slick.Color;
+import org.newdawn.slick.Graphics;
 
 /**
  *
  * @author schueler
  */
-public class ButtonGroup implements ActionListener
+public class ButtonGroup implements ActionListener, Drawable
 {
     private ArrayList<Button> buttons;
-    private ButtonTemplate template;
-    private int x;
-    private int y;
+    private final ButtonTemplate template;
+    private final ButtonColorTemplate activeColors;
+    private final ButtonColorTemplate passiveColors;
+    private final int x;
+    private final int y;
+    private int selectedButton = 0;
     
-    public ButtonGroup()
+    public ButtonGroup(int x, int y)
     {
+        this.x = x;
+        this.y = y;
         template = new ButtonTemplate(Color.black , Color.darkGray, Color.white, 5 , 120 , 40);
+        passiveColors = new ButtonColorTemplate(Color.black , Color.darkGray, Color.white);
+        activeColors = new ButtonColorTemplate(Color.white , Color.lightGray, Color.black);
     }
     
     public void addButton(String text)
@@ -34,6 +43,23 @@ public class ButtonGroup implements ActionListener
     @Override
     public void actionPerformed(ActionEvent e)
     {
-        throw new UnsupportedOperationException("Not supported yet.");
+        for(Button b : buttons)
+        {
+            if(b == e.getSource())
+            {
+                buttons.get(selectedButton).changeColors(passiveColors);
+                selectedButton = buttons.indexOf(b);
+                b.changeColors(activeColors);
+            }
+        }
+    }
+
+    @Override
+    public void draw(Graphics g)
+    {
+        for(Button b : buttons)
+        {
+            b.draw(g);
+        }
     }
 }
